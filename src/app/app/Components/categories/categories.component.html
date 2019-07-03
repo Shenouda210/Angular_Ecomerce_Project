@@ -1,0 +1,69 @@
+<!-- <div class="container-fluid" style="text-align: center">
+
+
+
+<table class="table table-dark">
+  <thead >
+    <td>Category ID</td>
+    <td>Category Name</td>
+    <td>Description</td>
+    <td>Category picture</td>
+  </thead>
+  <tbody>
+    <tr *ngFor="let category of categories">
+      <td>{{category.ID}}</td>
+      <td>{{category.CategoryName}}</td>
+      <td>{{category.Description}}</td>
+      <td><img src="../../../assets/img/{{category.Picture}}" width="150px" height="auto"></td>
+      <input class="form-control" type="button" name=""value="Details" (click)="DisplayCatDetails(category.ID)">
+    </tr>
+  </tbody>
+</table>
+  
+</div> -->
+<div class="container ">
+    <button (click)="addNewCategory()" class="btn btn-primary">Add Category</button>
+
+    <div *ngFor="let category of categories">
+      <div class="card mt-3 ml-3 card-dark">
+          <div class="card-header">
+              <h3>{{category.CategoryName}}</h3>
+            </div>
+        <div class="card-body">
+          <div class="row">
+          <div class="col-md-4">
+             
+
+              <td><img src="../../../../assets/images/{{category.Picture}}" width="300px" height="auto"></td>
+          </div>
+          <div class="col-md-8">
+            <table class="table table-bordered">
+                <tr>
+                    <td style="padding: 1px">ID :</td>
+                    <td style="padding: 1px">Description :</td>
+                </tr>
+                <tr>
+                    <td style="padding: 1px">{{category.ID}}</td>
+                    <td style="padding: 1px">{{category.Description}}</td>
+                </tr>
+            </table>
+           
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="row">
+            <div class="col">
+                  <input class="form-control" type="button" name=""value="Details" (click)="DisplayCatDetails(category.ID)">
+            </div>
+            <div class="col">
+                  <input class="form-control" type="button" name=""value="Edit" (click)="editCategory(category.ID)">
+            </div>
+            <div class="col">
+                <input class="form-control" type="button" name=""value="Delete" (click)="DeleteCategory(category.ID)">
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>   
+</div>

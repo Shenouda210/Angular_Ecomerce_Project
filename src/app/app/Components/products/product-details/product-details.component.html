@@ -1,0 +1,50 @@
+<div class="container">
+    
+
+  <div class="card mt-3 ml-3 card-dark">
+      <div class="card-header">
+          <h3>{{selProduct.ProductName}}</h3>
+        </div>
+    <div class="card-body">
+      <div class="row">
+      <div class="col-md-4">
+          <img src="../../../../assets/images/{{selProduct.Picture}}" width="300px" height="auto">
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col">
+              <div>ID :</div>
+              <div>Description :</div>
+              <div>PriceAfterDiscount :</div>
+              <div>PriceBeforeDiscount :</div>
+              <div>Discount :</div>
+              <div>QuantityInStock :</div>
+              <div>ProductDiscription :</div>
+
+          </div>
+          <div class="col">
+              <div>{{selProduct.ID}}</div>
+              <div>{{selProduct.PriceAfterDiscount}}</div>
+              <div>{{selProduct.PriceBeforeDiscount}}</div>
+              <div>{{selProduct.Discount}}</div>
+              <div>{{selProduct.QuantityInStock}}</div>
+              <div>{{selProduct.ProductDiscription}}</div>
+
+
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="row">
+        <div class="col">
+              <input class="form-control" type="button" name=""value="Back to list" (click)="goback()">
+        </div>
+        <div class="col">
+              <input class="form-control" type="button" name=""value="Edit" (click)="editCategory(selProduct.ID)">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

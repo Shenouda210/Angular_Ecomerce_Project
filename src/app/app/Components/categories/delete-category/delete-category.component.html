@@ -1,0 +1,38 @@
+<div class="container">
+    
+
+    <div class="card mt-3 ml-3 card-dark">
+        <div class="card-header">
+            <h3>{{selCat.CategoryName}}</h3>
+          </div>
+      <div class="card-body">
+        <div class="row">
+        <div class="col-md-4">
+            <img src="../../../../assets/img/{{selCat.Picture}}" width="300px" height="auto">
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col">
+                <div>ID :</div>
+                <div>Description :</div>
+            </div>
+            <div class="col">
+                <div>{{selCat.ID}}</div>
+                <div>{{selCat.Description}}</div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="row">
+          <div class="col">
+                <input class="form-control" type="button" name=""value="Back to list" (click)="goback()">
+          </div>
+          <div class="col">
+                <input class="form-control" type="button" name=""value="Delete" (click)="deletecategory(selCat.ID)">
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

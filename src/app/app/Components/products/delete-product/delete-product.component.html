@@ -1,0 +1,49 @@
+<div class="container">
+    
+
+  <div class="card mt-3 ml-3 card-dark">
+      <div class="card-header">
+          <h3>{{selectedProduct.ProductName}}</h3>
+        </div>
+    <div class="card-body">
+      <div class="row">
+      <div class="col-md-4">
+          <img src="../../../../assets/img/{{selectedProduct.Picture}}" width="300px" height="auto">
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col">
+              <div>ID :</div>
+              <div>PriceBeforeDiscount :</div>
+              <div>PriceAfterDiscount :</div>
+              <div>Discount :</div>
+              <div>Quantity In Stock :</div>
+              <div>Product description :</div>
+
+          </div>
+          <div class="col">
+              <div>{{selectedProduct.ID}}</div>
+              <div>{{selectedProduct.PriceBeforeDiscount}}</div>
+              <div>{{selectedProduct.PriceAfterDiscount}}</div>
+              <div>{{selectedProduct.Discount}}</div>
+              <div>{{selectedProduct.QuantityInStock}}</div>
+              <div>{{selectedProduct.ProductDiscription}}</div>
+
+
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="row">
+        <div class="col">
+              <input class="form-control" type="button" name=""value="Back to list" (click)="goback()">
+        </div>
+        <div class="col">
+              <input class="form-control" type="button" name=""value="Delete" (click)="deletecategory(selectedProduct.ID)">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

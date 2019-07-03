@@ -1,0 +1,70 @@
+<div class="container">
+  <form  #templateVariableName="ngForm" (ngSubmit)="addNewCategory()">
+          <div class="card">
+          <div class="card-header">
+                  <h3 class="card-title">Create Product</h3>
+          </div>
+          <div class="card-body row">
+                  <!-- product Name -->
+                  <div class="col">
+                  <div class="form-group">
+                          <label for="categories">Text</label>
+                          <select id="categories" [(ngModel)]="cat_ID"  class="form-control" name="">
+                                  <option  *ngFor="let Category of categories"  value="{{Category.ID}}">{{Category.CategoryName}}</option>
+                          </select>
+                  </div>
+
+                  <div class="form-group">
+                          <label for="catName">Product Name</label>
+                          <input id="catName" [(ngModel)]="NewProduct.ProductName" class="form-control " type="text" name="CategoryName">
+                          </div>
+                          <!--  PriceAfterDiscount -->
+                  <div class="form-group">
+                    <label for="catName"> PriceBeforeDiscount</label>
+                    <input id="catName" [(ngModel)]="NewProduct.PriceBeforeDiscount" class="form-control " type="number" name="CategoryName">
+                    </div>
+                        <!--  PriceAfterDiscount -->
+                  <div class="form-group">
+                    <label for="catName"> PriceAfterDiscount</label>
+                    <input id="catName" [(ngModel)]="NewProduct.PriceAfterDiscount" class="form-control " type="number" name="CategoryName">
+                    </div>
+                        <!--  Discount -->
+                  <div class="form-group">
+                    <label for="catName"> Discount</label>
+                    <input id="catName" [(ngModel)]="NewProduct.Discount" class="form-control " type="number" name="CategoryName">
+                    </div>
+                    </div>
+                   <div class="col">
+                  
+                           <!--  QuantityInStock -->
+                  <div class="form-group">
+                    <label for="catName"> QuantityInStock</label>
+                    <input id="catName" [(ngModel)]="NewProduct.QuantityInStock" class="form-control " type="number" name="CategoryName">
+                    </div>
+                    <!-- product discription -->
+                          <div class="form-group">
+                                  <label for="catDescription">Product Description</label>
+                                  <input id="catDescription" [(ngModel)]="NewProduct.ProductDiscription" class="form-control " type="text" name="Description">
+                          </div>
+                          <!-- product Picture -->
+                          <div class="form-group">
+                                  <label for="catPicture">Product picture</label>
+                                  <input id="catPicture" [(ngModel)]="NewProduct.Picture" class="form-control " type="text" name="Picture">
+                          </div>
+                   </div>
+                  </div>
+                          <div class="card-footer">
+                                  <div class="row">
+                                                  <div class="col">
+                                                          <input class="form-control" type="button" name=""value="Back to list" (click)="goback()">
+                                                  </div>
+                                                  <div class="col">
+                                                          <input value="Add Category" type="submit" class="btn btn-danger form-control" >
+                                                  </div>
+                                          
+                                  </div>
+                          </div>
+                         
+                          </div>
+  </form>
+  </div>

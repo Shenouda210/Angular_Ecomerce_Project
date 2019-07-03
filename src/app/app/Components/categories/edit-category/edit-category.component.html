@@ -1,0 +1,41 @@
+<div class="container">
+<form  #templateVariableName="ngForm" (ngSubmit)="editcategory(templateVariableName)">
+    <div class="card">
+        <div class="card-header">
+                <h3 class="card-title">Edit Category</h3>
+        </div>
+        <div class="card-body">
+                  <!-- <input id="catName" [(ngModel)]="selCat.ID" class="form-control col-md-5" type="hidden" name="CategoryName"> -->
+            
+                <div class="form-group">
+                        <label for="catName">category Name</label>
+                        <input id="catName" [(ngModel)]="selCat.CategoryName" class="form-control " type="text" name="CategoryName">
+                    </div>
+                    <!-- category Description-->
+                    <div class="form-group">
+                            <label for="catDescription">category Description</label>
+                            <input id="catDescription" [(ngModel)]="selCat.Description" class="form-control " type="text" name="Description">
+                    </div>
+                    <!-- category Picture -->
+                    <div class="form-group">
+                            <label for="catPicture">category picture</label>
+                            <input id="catPicture" [(ngModel)]="selCat.Picture" class="form-control " type="text" name="Picture">
+                    </div>
+                    <div class="card-footer">
+                            <div class="row">
+                            
+                        <div class="col">
+                                <input value="Edit" type="submit" class="btn btn-primary form-control" >       
+                        </div>
+                        <div class="col">
+                                <input class="form-control btn btn-danger" type="button" name=""value="Back to list" (click)="goback()">
+                        </div>
+                        
+                </div>
+                  
+        </div>
+        </div>
+    </div>
+    </form>
+    </div>
+    

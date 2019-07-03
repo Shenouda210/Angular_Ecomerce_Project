@@ -1,0 +1,56 @@
+
+<div class="container ">
+  <button (click)="addNewProduct()" class="btn btn-primary">Add Product</button>
+
+  <div *ngFor="let Product of Products">
+    <div class="card mt-3 ml-3 ">
+        <div class="card-header">
+            <h3>{{Product.ProductName}}</h3>
+          </div>
+      <div class="card-body">
+        <div class="row">
+        <div class="col-md-4">
+            <div><img src="../../../assets/images/{{Product.Picture}}" width="300px" height="auto"></div>
+        </div>
+        <div class="col-md-8">
+          <div class="table table-bordered table-dark row">
+             <div class="col">
+              
+                  <div class="table table-bordered" style="padding: 1px">ID :</div>
+                  <div class="table table-bordered" style="padding: 1px">PriceAfterDiscount :</div>
+                  <div class="table table-bordered" style="padding: 1px">PriceBeforeDiscount :</div>
+                  <div class="table table-bordered" style="padding: 1px">Discount :</div>
+                  <div class="table table-bordered" style="padding: 1px">QuantityInStock :</div>
+                  <div class="table table-bordered" style="padding: 1px">Producdiviscription :</div>
+               
+             </div>
+             <div class="col">
+             
+                  <div class="table table-bordered" style="padding: 1px">{{Product.ID}}</div>
+                  <div class="table table-bordered" style="padding: 1px">{{Product.PriceAfterDiscount}}</div>
+                  <div class="table table-bordered" style="padding: 1px">{{Product.PriceBeforeDiscount}}</div>
+                  <div class="table table-bordered" style="padding: 1px">{{Product.Discount}}</div>
+                  <div class="table table-bordered" style="padding: 1px">{{Product.QuantityInStock}}</div>
+                  <div class="table table-bordered" style="padding: 1px">{{Product.ProductDiscription}}</div>
+             </div>
+          </div>
+         
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="row">
+          <div class="col">
+                <input class="form-control" type="button" name=""value="Details" (click)="DisplayProductDetails(Product.ID)">
+          </div>
+          <div class="col">
+                <input class="form-control" type="button" name=""value="Edit" (click)="editProduct(Product.ID)">
+          </div>
+          <div class="col">
+              <input class="form-control" type="button" name=""value="Delete" (click)="DeleteProduct(Product.ID)">
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>   
+</div>

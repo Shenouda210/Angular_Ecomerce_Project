@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="card col-sm-12">
+      <div class="card-header  bg-Secondary ">
+
+          <ul class="nav nav-tabs card-header-tabs row">
+            <li class="nav-item col">
+              <a class="nav-link btn form-control" [routerLink]="['/login']" routerLinkActive="router-link-active" >Sign In</a>
+            </li>
+            <li class="nav-item col">
+              <a class="nav-link btn form-control" [routerLink]="['/signup']" routerLinkActive="router-link-active" >Sign Up</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body white">
+          <div class="row">
+            <div class="col-sm-12">
+            <router-outlet></router-outlet>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

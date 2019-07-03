@@ -1,0 +1,37 @@
+<div class="container">
+<form  #templateVariableName="ngForm" (ngSubmit)="addNewCategory(templateVariableName)">
+        <div class="card">
+        <div class="card-header">
+                <h3 class="card-title">Create Category</h3>
+        </div>
+        <div class="card-body">
+                
+                <div class="form-group">
+                        <label for="catName">category Name</label>
+                        <input id="catName" [(ngModel)]="newCategory.CategoryName" class="form-control " type="text" name="CategoryName">
+                        </div>
+                        <!-- category Description-->
+                        <div class="form-group">
+                                <label for="catDescription">category Description</label>
+                                <input id="catDescription" [(ngModel)]="newCategory.Description" class="form-control " type="text" name="Description">
+                        </div>
+                        <!-- category Picture -->
+                        <div class="form-group">
+                                <label for="catPicture">category picture</label>
+                                <input id="catPicture" [(ngModel)]="newCategory.Picture" class="form-control " type="text" name="Picture">
+                        </div>
+                        <div class="card-footer">
+                                <div class="row">
+                                                <div class="col">
+                                                        <input class="form-control" type="button" name=""value="Back to list" (click)="goback()">
+                                                </div>
+                                                <div class="col">
+                                                        <input value="Add Category" type="submit" class="btn btn-danger form-control" >
+                                                </div>
+                                        
+                                </div>
+                        </div>
+                        </div>
+                        </div>
+</form>
+</div>
